@@ -3,10 +3,10 @@ package tls
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/hashicorp/cdktf-provider-tls-go/tls/jsii"
+	_init_ "github.com/hashicorp/cdktf-provider-tls-go/tls/v2/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/hashicorp/cdktf-provider-tls-go/tls/internal"
+	"github.com/hashicorp/cdktf-provider-tls-go/tls/v2/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -16,6 +16,10 @@ type CertRequest interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	CertRequestPem() *string
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -30,6 +34,10 @@ type CertRequest interface {
 	SetDnsNames(val *[]*string)
 	DnsNamesInput() *[]*string
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -38,8 +46,6 @@ type CertRequest interface {
 	SetIpAddresses(val *[]*string)
 	IpAddressesInput() *[]*string
 	KeyAlgorithm() *string
-	SetKeyAlgorithm(val *string)
-	KeyAlgorithmInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -53,6 +59,10 @@ type CertRequest interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	Subject() CertRequestSubjectOutputReference
@@ -94,7 +104,6 @@ type CertRequest interface {
 	PutSubject(value *CertRequestSubject)
 	ResetDnsNames()
 	ResetIpAddresses()
-	ResetKeyAlgorithm()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -130,6 +139,16 @@ func (j *jsiiProxy_CertRequest) CertRequestPem() *string {
 	_jsii_.Get(
 		j,
 		"certRequestPem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CertRequest) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
 		&returns,
 	)
 	return returns
@@ -180,6 +199,16 @@ func (j *jsiiProxy_CertRequest) DnsNamesInput() *[]*string {
 	_jsii_.Get(
 		j,
 		"dnsNamesInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CertRequest) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -245,16 +274,6 @@ func (j *jsiiProxy_CertRequest) KeyAlgorithm() *string {
 	return returns
 }
 
-func (j *jsiiProxy_CertRequest) KeyAlgorithmInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"keyAlgorithmInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_CertRequest) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -300,6 +319,16 @@ func (j *jsiiProxy_CertRequest) Provider() cdktf.TerraformProvider {
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CertRequest) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
 		&returns,
 	)
 	return returns
@@ -412,6 +441,14 @@ func NewCertRequest_Override(c CertRequest, scope constructs.Construct, id *stri
 	)
 }
 
+func (j *jsiiProxy_CertRequest) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_CertRequest) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -436,18 +473,18 @@ func (j *jsiiProxy_CertRequest) SetDnsNames(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_CertRequest) SetIpAddresses(val *[]*string) {
+func (j *jsiiProxy_CertRequest) SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
-		"ipAddresses",
+		"forEach",
 		val,
 	)
 }
 
-func (j *jsiiProxy_CertRequest) SetKeyAlgorithm(val *string) {
+func (j *jsiiProxy_CertRequest) SetIpAddresses(val *[]*string) {
 	_jsii_.Set(
 		j,
-		"keyAlgorithm",
+		"ipAddresses",
 		val,
 	)
 }
@@ -472,6 +509,14 @@ func (j *jsiiProxy_CertRequest) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CertRequest) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -697,14 +742,6 @@ func (c *jsiiProxy_CertRequest) ResetIpAddresses() {
 	)
 }
 
-func (c *jsiiProxy_CertRequest) ResetKeyAlgorithm() {
-	_jsii_.InvokeVoid(
-		c,
-		"resetKeyAlgorithm",
-		nil, // no parameters
-	)
-}
-
 func (c *jsiiProxy_CertRequest) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		c,
@@ -783,13 +820,19 @@ func (c *jsiiProxy_CertRequest) ToTerraform() interface{} {
 
 type CertRequestConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// Private key in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format, that the certificate will belong to. This can be read from a separate file using the [`file`](https://www.terraform.io/language/functions/file) interpolation function. Only an irreversible secure hash of the private key will be stored in the Terraform state.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#private_key_pem CertRequest#private_key_pem}
@@ -802,12 +845,6 @@ type CertRequestConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#ip_addresses CertRequest#ip_addresses}
 	IpAddresses *[]*string `field:"optional" json:"ipAddresses" yaml:"ipAddresses"`
-	// Name of the algorithm used when generating the private key provided in `private_key_pem`.
-	//
-	// **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#key_algorithm CertRequest#key_algorithm}
-	KeyAlgorithm *string `field:"optional" json:"keyAlgorithm" yaml:"keyAlgorithm"`
 	// subject block.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/cert_request#subject CertRequest#subject}
@@ -1622,6 +1659,10 @@ type DataTlsCertificate interface {
 	// Experimental.
 	SetDependsOn(val *[]*string)
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -1761,6 +1802,16 @@ func (j *jsiiProxy_DataTlsCertificate) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTlsCertificate) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -1953,6 +2004,14 @@ func (j *jsiiProxy_DataTlsCertificate) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataTlsCertificate) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -2960,13 +3019,19 @@ func (d *jsiiProxy_DataTlsCertificateCertificatesOutputReference) ToString() *st
 
 type DataTlsCertificateConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// The content of the certificate in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/certificate#content DataTlsCertificate#content}
@@ -2999,6 +3064,10 @@ type DataTlsPublicKey interface {
 	DependsOn() *[]*string
 	// Experimental.
 	SetDependsOn(val *[]*string)
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -3122,6 +3191,16 @@ func (j *jsiiProxy_DataTlsPublicKey) DependsOn() *[]*string {
 	_jsii_.Get(
 		j,
 		"dependsOn",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_DataTlsPublicKey) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -3346,6 +3425,14 @@ func (j *jsiiProxy_DataTlsPublicKey) SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
+		val,
+	)
+}
+
+func (j *jsiiProxy_DataTlsPublicKey) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
 		val,
 	)
 }
@@ -3649,18 +3736,24 @@ func (d *jsiiProxy_DataTlsPublicKey) ToTerraform() interface{} {
 
 type DataTlsPublicKeyConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
-	// The private key (in  [OpenSSH PEM (RFC 4716)](https://datatracker.ietf.org/doc/html/rfc4716) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_pem`.
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
+	// The private key (in  [OpenSSH PEM (RFC 4716)](https://datatracker.ietf.org/doc/html/rfc4716) format) to extract the public key from. This is _mutually exclusive_ with `private_key_pem`. Currently-supported algorithms for keys are: `RSA`, `ECDSA`, `ED25519`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_openssh DataTlsPublicKey#private_key_openssh}
 	PrivateKeyOpenssh *string `field:"optional" json:"privateKeyOpenssh" yaml:"privateKeyOpenssh"`
-	// The private key (in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format) to extract the public key from. Currently-supported algorithms for keys are `RSA`, `ECDSA` and `ED25519`. This is _mutually exclusive_ with `private_key_openssh`.
+	// The private key (in [PEM (RFC 1421)](https://datatracker.ietf.org/doc/html/rfc1421) format) to extract the public key from. This is _mutually exclusive_ with `private_key_openssh`. Currently-supported algorithms for keys are: `RSA`, `ECDSA`, `ED25519`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/d/public_key#private_key_pem DataTlsPublicKey#private_key_pem}
 	PrivateKeyPem *string `field:"optional" json:"privateKeyPem" yaml:"privateKeyPem"`
@@ -3676,8 +3769,6 @@ type LocallySignedCert interface {
 	SetCaCertPem(val *string)
 	CaCertPemInput() *string
 	CaKeyAlgorithm() *string
-	SetCaKeyAlgorithm(val *string)
-	CaKeyAlgorithmInput() *string
 	CaPrivateKeyPem() *string
 	SetCaPrivateKeyPem(val *string)
 	CaPrivateKeyPemInput() *string
@@ -3687,6 +3778,10 @@ type LocallySignedCert interface {
 	CertRequestPem() *string
 	SetCertRequestPem(val *string)
 	CertRequestPemInput() *string
+	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
 	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
@@ -3700,6 +3795,10 @@ type LocallySignedCert interface {
 	EarlyRenewalHours() *float64
 	SetEarlyRenewalHours(val *float64)
 	EarlyRenewalHoursInput() *float64
+	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
 	// Experimental.
 	Fqn() *string
 	// Experimental.
@@ -3718,6 +3817,10 @@ type LocallySignedCert interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	ReadyForRenewal() cdktf.IResolvable
@@ -3760,7 +3863,6 @@ type LocallySignedCert interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	ResetCaKeyAlgorithm()
 	ResetEarlyRenewalHours()
 	ResetIsCaCertificate()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -3832,16 +3934,6 @@ func (j *jsiiProxy_LocallySignedCert) CaKeyAlgorithm() *string {
 	return returns
 }
 
-func (j *jsiiProxy_LocallySignedCert) CaKeyAlgorithmInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"caKeyAlgorithmInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_LocallySignedCert) CaPrivateKeyPem() *string {
 	var returns *string
 	_jsii_.Get(
@@ -3902,6 +3994,16 @@ func (j *jsiiProxy_LocallySignedCert) CertRequestPemInput() *string {
 	return returns
 }
 
+func (j *jsiiProxy_LocallySignedCert) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_LocallySignedCert) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -3947,6 +4049,16 @@ func (j *jsiiProxy_LocallySignedCert) EarlyRenewalHoursInput() *float64 {
 	_jsii_.Get(
 		j,
 		"earlyRenewalHoursInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LocallySignedCert) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -4027,6 +4139,16 @@ func (j *jsiiProxy_LocallySignedCert) Provider() cdktf.TerraformProvider {
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_LocallySignedCert) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
 		&returns,
 	)
 	return returns
@@ -4185,14 +4307,6 @@ func (j *jsiiProxy_LocallySignedCert) SetCaCertPem(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetCaKeyAlgorithm(val *string) {
-	_jsii_.Set(
-		j,
-		"caKeyAlgorithm",
-		val,
-	)
-}
-
 func (j *jsiiProxy_LocallySignedCert) SetCaPrivateKeyPem(val *string) {
 	_jsii_.Set(
 		j,
@@ -4205,6 +4319,14 @@ func (j *jsiiProxy_LocallySignedCert) SetCertRequestPem(val *string) {
 	_jsii_.Set(
 		j,
 		"certRequestPem",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LocallySignedCert) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
 		val,
 	)
 }
@@ -4233,6 +4355,14 @@ func (j *jsiiProxy_LocallySignedCert) SetEarlyRenewalHours(val *float64) {
 	)
 }
 
+func (j *jsiiProxy_LocallySignedCert) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_LocallySignedCert) SetIsCaCertificate(val interface{}) {
 	_jsii_.Set(
 		j,
@@ -4253,6 +4383,14 @@ func (j *jsiiProxy_LocallySignedCert) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_LocallySignedCert) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -4462,14 +4600,6 @@ func (l *jsiiProxy_LocallySignedCert) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (l *jsiiProxy_LocallySignedCert) ResetCaKeyAlgorithm() {
-	_jsii_.InvokeVoid(
-		l,
-		"resetCaKeyAlgorithm",
-		nil, // no parameters
-	)
-}
-
 func (l *jsiiProxy_LocallySignedCert) ResetEarlyRenewalHours() {
 	_jsii_.InvokeVoid(
 		l,
@@ -4556,13 +4686,19 @@ func (l *jsiiProxy_LocallySignedCert) ToTerraform() interface{} {
 
 type LocallySignedCertConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// List of key usages allowed for the issued certificate.
 	//
 	// Values are defined in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280) and combine flags defined by both [Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.3) and [Extended Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12). Accepted values: `any_extended`, `cert_signing`, `client_auth`, `code_signing`, `content_commitment`, `crl_signing`, `data_encipherment`, `decipher_only`, `digital_signature`, `email_protection`, `encipher_only`, `ipsec_end_system`, `ipsec_tunnel`, `ipsec_user`, `key_agreement`, `key_encipherment`, `microsoft_commercial_code_signing`, `microsoft_kernel_code_signing`, `microsoft_server_gated_crypto`, `netscape_server_gated_crypto`, `ocsp_signing`, `server_auth`, `timestamping`.
@@ -4585,12 +4721,6 @@ type LocallySignedCertConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#validity_period_hours LocallySignedCert#validity_period_hours}
 	ValidityPeriodHours *float64 `field:"required" json:"validityPeriodHours" yaml:"validityPeriodHours"`
-	// Name of the algorithm used when generating the private key provided in `ca_private_key_pem`.
-	//
-	// **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/locally_signed_cert#ca_key_algorithm LocallySignedCert#ca_key_algorithm}
-	CaKeyAlgorithm *string `field:"optional" json:"caKeyAlgorithm" yaml:"caKeyAlgorithm"`
 	// The resource will consider the certificate to have expired the given number of hours before its actual expiry time.
 	//
 	// This can be useful to deploy an updated certificate in advance of the expiration of the current certificate. However, the old certificate remains valid until its true expiration time, since this resource does not (and cannot) support certificate revocation. Also, this advance update can only be performed should the Terraform configuration be applied during the early renewal period. (default: `0`)
@@ -4616,6 +4746,10 @@ type PrivateKey interface {
 	// Experimental.
 	CdktfStack() cdktf.TerraformStack
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -4629,6 +4763,10 @@ type PrivateKey interface {
 	SetEcdsaCurve(val *string)
 	EcdsaCurveInput() *string
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -4641,10 +4779,15 @@ type PrivateKey interface {
 	Node() constructs.Node
 	PrivateKeyOpenssh() *string
 	PrivateKeyPem() *string
+	PrivateKeyPemPkcs8() *string
 	// Experimental.
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	PublicKeyFingerprintMd5() *string
 	PublicKeyFingerprintSha256() *string
 	PublicKeyOpenssh() *string
@@ -4735,6 +4878,16 @@ func (j *jsiiProxy_PrivateKey) CdktfStack() cdktf.TerraformStack {
 	return returns
 }
 
+func (j *jsiiProxy_PrivateKey) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_PrivateKey) ConstructNodeMetadata() *map[string]interface{} {
 	var returns *map[string]interface{}
 	_jsii_.Get(
@@ -4780,6 +4933,16 @@ func (j *jsiiProxy_PrivateKey) EcdsaCurveInput() *string {
 	_jsii_.Get(
 		j,
 		"ecdsaCurveInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PrivateKey) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -4855,11 +5018,31 @@ func (j *jsiiProxy_PrivateKey) PrivateKeyPem() *string {
 	return returns
 }
 
+func (j *jsiiProxy_PrivateKey) PrivateKeyPemPkcs8() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"privateKeyPemPkcs8",
+		&returns,
+	)
+	return returns
+}
+
 func (j *jsiiProxy_PrivateKey) Provider() cdktf.TerraformProvider {
 	var returns cdktf.TerraformProvider
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_PrivateKey) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
 		&returns,
 	)
 	return returns
@@ -5000,6 +5183,14 @@ func (j *jsiiProxy_PrivateKey) SetAlgorithm(val *string) {
 	)
 }
 
+func (j *jsiiProxy_PrivateKey) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_PrivateKey) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -5024,6 +5215,14 @@ func (j *jsiiProxy_PrivateKey) SetEcdsaCurve(val *string) {
 	)
 }
 
+func (j *jsiiProxy_PrivateKey) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_PrivateKey) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
 	_jsii_.Set(
 		j,
@@ -5036,6 +5235,14 @@ func (j *jsiiProxy_PrivateKey) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_PrivateKey) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -5315,20 +5522,26 @@ func (p *jsiiProxy_PrivateKey) ToTerraform() interface{} {
 
 type PrivateKeyConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
-	// Name of the algorithm to use when generating the private key. Currently-supported values are `RSA`, `ECDSA` and `ED25519`.
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
+	// Name of the algorithm to use when generating the private key. Currently-supported values are: `RSA`, `ECDSA`, `ED25519`.
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#algorithm PrivateKey#algorithm}
 	Algorithm *string `field:"required" json:"algorithm" yaml:"algorithm"`
 	// When `algorithm` is `ECDSA`, the name of the elliptic curve to use.
 	//
-	// Currently-supported values are `P224`, `P256`, `P384` or `P521` (default: `P224`).
+	// Currently-supported values are: `P224`, `P256`, `P384`, `P521`. (default: `P224`).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/private_key#ecdsa_curve PrivateKey#ecdsa_curve}
 	EcdsaCurve *string `field:"optional" json:"ecdsaCurve" yaml:"ecdsaCurve"`
@@ -5348,6 +5561,10 @@ type SelfSignedCert interface {
 	CdktfStack() cdktf.TerraformStack
 	CertPem() *string
 	// Experimental.
+	Connection() interface{}
+	// Experimental.
+	SetConnection(val interface{})
+	// Experimental.
 	ConstructNodeMetadata() *map[string]interface{}
 	// Experimental.
 	Count() *float64
@@ -5364,6 +5581,10 @@ type SelfSignedCert interface {
 	SetEarlyRenewalHours(val *float64)
 	EarlyRenewalHoursInput() *float64
 	// Experimental.
+	ForEach() cdktf.ITerraformIterator
+	// Experimental.
+	SetForEach(val cdktf.ITerraformIterator)
+	// Experimental.
 	Fqn() *string
 	// Experimental.
 	FriendlyUniqueId() *string
@@ -5375,8 +5596,6 @@ type SelfSignedCert interface {
 	SetIsCaCertificate(val interface{})
 	IsCaCertificateInput() interface{}
 	KeyAlgorithm() *string
-	SetKeyAlgorithm(val *string)
-	KeyAlgorithmInput() *string
 	// Experimental.
 	Lifecycle() *cdktf.TerraformResourceLifecycle
 	// Experimental.
@@ -5390,6 +5609,10 @@ type SelfSignedCert interface {
 	Provider() cdktf.TerraformProvider
 	// Experimental.
 	SetProvider(val cdktf.TerraformProvider)
+	// Experimental.
+	Provisioners() *[]interface{}
+	// Experimental.
+	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
 	ReadyForRenewal() cdktf.IResolvable
@@ -5445,7 +5668,6 @@ type SelfSignedCert interface {
 	ResetEarlyRenewalHours()
 	ResetIpAddresses()
 	ResetIsCaCertificate()
-	ResetKeyAlgorithm()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
 	// Experimental.
 	ResetOverrideLogicalId()
@@ -5503,6 +5725,16 @@ func (j *jsiiProxy_SelfSignedCert) CertPem() *string {
 	_jsii_.Get(
 		j,
 		"certPem",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SelfSignedCert) Connection() interface{} {
+	var returns interface{}
+	_jsii_.Get(
+		j,
+		"connection",
 		&returns,
 	)
 	return returns
@@ -5573,6 +5805,16 @@ func (j *jsiiProxy_SelfSignedCert) EarlyRenewalHoursInput() *float64 {
 	_jsii_.Get(
 		j,
 		"earlyRenewalHoursInput",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SelfSignedCert) ForEach() cdktf.ITerraformIterator {
+	var returns cdktf.ITerraformIterator
+	_jsii_.Get(
+		j,
+		"forEach",
 		&returns,
 	)
 	return returns
@@ -5658,16 +5900,6 @@ func (j *jsiiProxy_SelfSignedCert) KeyAlgorithm() *string {
 	return returns
 }
 
-func (j *jsiiProxy_SelfSignedCert) KeyAlgorithmInput() *string {
-	var returns *string
-	_jsii_.Get(
-		j,
-		"keyAlgorithmInput",
-		&returns,
-	)
-	return returns
-}
-
 func (j *jsiiProxy_SelfSignedCert) Lifecycle() *cdktf.TerraformResourceLifecycle {
 	var returns *cdktf.TerraformResourceLifecycle
 	_jsii_.Get(
@@ -5713,6 +5945,16 @@ func (j *jsiiProxy_SelfSignedCert) Provider() cdktf.TerraformProvider {
 	_jsii_.Get(
 		j,
 		"provider",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_SelfSignedCert) Provisioners() *[]interface{} {
+	var returns *[]interface{}
+	_jsii_.Get(
+		j,
+		"provisioners",
 		&returns,
 	)
 	return returns
@@ -5923,6 +6165,14 @@ func (j *jsiiProxy_SelfSignedCert) SetAllowedUses(val *[]*string) {
 	)
 }
 
+func (j *jsiiProxy_SelfSignedCert) SetConnection(val interface{}) {
+	_jsii_.Set(
+		j,
+		"connection",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SelfSignedCert) SetCount(val *float64) {
 	_jsii_.Set(
 		j,
@@ -5955,6 +6205,14 @@ func (j *jsiiProxy_SelfSignedCert) SetEarlyRenewalHours(val *float64) {
 	)
 }
 
+func (j *jsiiProxy_SelfSignedCert) SetForEach(val cdktf.ITerraformIterator) {
+	_jsii_.Set(
+		j,
+		"forEach",
+		val,
+	)
+}
+
 func (j *jsiiProxy_SelfSignedCert) SetIpAddresses(val *[]*string) {
 	_jsii_.Set(
 		j,
@@ -5967,14 +6225,6 @@ func (j *jsiiProxy_SelfSignedCert) SetIsCaCertificate(val interface{}) {
 	_jsii_.Set(
 		j,
 		"isCaCertificate",
-		val,
-	)
-}
-
-func (j *jsiiProxy_SelfSignedCert) SetKeyAlgorithm(val *string) {
-	_jsii_.Set(
-		j,
-		"keyAlgorithm",
 		val,
 	)
 }
@@ -5999,6 +6249,14 @@ func (j *jsiiProxy_SelfSignedCert) SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
+		val,
+	)
+}
+
+func (j *jsiiProxy_SelfSignedCert) SetProvisioners(val *[]interface{}) {
+	_jsii_.Set(
+		j,
+		"provisioners",
 		val,
 	)
 }
@@ -6264,14 +6522,6 @@ func (s *jsiiProxy_SelfSignedCert) ResetIsCaCertificate() {
 	)
 }
 
-func (s *jsiiProxy_SelfSignedCert) ResetKeyAlgorithm() {
-	_jsii_.InvokeVoid(
-		s,
-		"resetKeyAlgorithm",
-		nil, // no parameters
-	)
-}
-
 func (s *jsiiProxy_SelfSignedCert) ResetOverrideLogicalId() {
 	_jsii_.InvokeVoid(
 		s,
@@ -6366,13 +6616,19 @@ func (s *jsiiProxy_SelfSignedCert) ToTerraform() interface{} {
 
 type SelfSignedCertConfig struct {
 	// Experimental.
+	Connection interface{} `field:"optional" json:"connection" yaml:"connection"`
+	// Experimental.
 	Count *float64 `field:"optional" json:"count" yaml:"count"`
 	// Experimental.
 	DependsOn *[]cdktf.ITerraformDependable `field:"optional" json:"dependsOn" yaml:"dependsOn"`
 	// Experimental.
+	ForEach cdktf.ITerraformIterator `field:"optional" json:"forEach" yaml:"forEach"`
+	// Experimental.
 	Lifecycle *cdktf.TerraformResourceLifecycle `field:"optional" json:"lifecycle" yaml:"lifecycle"`
 	// Experimental.
 	Provider cdktf.TerraformProvider `field:"optional" json:"provider" yaml:"provider"`
+	// Experimental.
+	Provisioners *[]interface{} `field:"optional" json:"provisioners" yaml:"provisioners"`
 	// List of key usages allowed for the issued certificate.
 	//
 	// Values are defined in [RFC 5280](https://datatracker.ietf.org/doc/html/rfc5280) and combine flags defined by both [Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.3) and [Extended Key Usages](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.12). Accepted values: `any_extended`, `cert_signing`, `client_auth`, `code_signing`, `content_commitment`, `crl_signing`, `data_encipherment`, `decipher_only`, `digital_signature`, `email_protection`, `encipher_only`, `ipsec_end_system`, `ipsec_tunnel`, `ipsec_user`, `key_agreement`, `key_encipherment`, `microsoft_commercial_code_signing`, `microsoft_kernel_code_signing`, `microsoft_server_gated_crypto`, `netscape_server_gated_crypto`, `ocsp_signing`, `server_auth`, `timestamping`.
@@ -6405,12 +6661,6 @@ type SelfSignedCertConfig struct {
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#is_ca_certificate SelfSignedCert#is_ca_certificate}
 	IsCaCertificate interface{} `field:"optional" json:"isCaCertificate" yaml:"isCaCertificate"`
-	// Name of the algorithm used when generating the private key provided in `private_key_pem`.
-	//
-	// **NOTE**: this is deprecated and ignored, as the key algorithm is now inferred from the key.
-	//
-	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#key_algorithm SelfSignedCert#key_algorithm}
-	KeyAlgorithm *string `field:"optional" json:"keyAlgorithm" yaml:"keyAlgorithm"`
 	// Should the generated certificate include an [authority key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.1): for self-signed certificates this is the same value as the [subject key identifier](https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.1.2) (default: `false`).
 	//
 	// Docs at Terraform Registry: {@link https://www.terraform.io/docs/providers/tls/r/self_signed_cert#set_authority_key_id SelfSignedCert#set_authority_key_id}
