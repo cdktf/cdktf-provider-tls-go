@@ -367,6 +367,9 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) TerraformResource() cdktf.
 func NewCertRequestSubjectOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) CertRequestSubjectOutputReference {
 	_init_.Initialize()
 
+	if err := validateNewCertRequestSubjectOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_CertRequestSubjectOutputReference{}
 
 	_jsii_.Create(
@@ -388,7 +391,10 @@ func NewCertRequestSubjectOutputReference_Override(c CertRequestSubjectOutputRef
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetCommonName(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetCommonName(val *string) {
+	if err := j.validateSetCommonNameParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"commonName",
@@ -396,7 +402,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetCommonName(val *string)
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetComplexObjectIndex(val interface{}) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetComplexObjectIndex(val interface{}) {
+	if err := j.validateSetComplexObjectIndexParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIndex",
@@ -404,7 +413,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetComplexObjectIndex(val 
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetComplexObjectIsFromSet(val *bool) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetComplexObjectIsFromSet(val *bool) {
+	if err := j.validateSetComplexObjectIsFromSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"complexObjectIsFromSet",
@@ -412,7 +424,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetComplexObjectIsFromSet(
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetCountry(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetCountry(val *string) {
+	if err := j.validateSetCountryParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"country",
@@ -420,7 +435,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetCountry(val *string) {
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetInternalValue(val *CertRequestSubject) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetInternalValue(val *CertRequestSubject) {
+	if err := j.validateSetInternalValueParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"internalValue",
@@ -428,7 +446,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetInternalValue(val *Cert
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetLocality(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetLocality(val *string) {
+	if err := j.validateSetLocalityParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"locality",
@@ -436,7 +457,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetLocality(val *string) {
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetOrganization(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetOrganization(val *string) {
+	if err := j.validateSetOrganizationParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"organization",
@@ -444,7 +468,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetOrganization(val *strin
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetOrganizationalUnit(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetOrganizationalUnit(val *string) {
+	if err := j.validateSetOrganizationalUnitParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"organizationalUnit",
@@ -452,7 +479,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetOrganizationalUnit(val 
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetPostalCode(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetPostalCode(val *string) {
+	if err := j.validateSetPostalCodeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"postalCode",
@@ -460,7 +490,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetPostalCode(val *string)
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetProvince(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetProvince(val *string) {
+	if err := j.validateSetProvinceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"province",
@@ -468,7 +501,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetProvince(val *string) {
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetSerialNumber(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetSerialNumber(val *string) {
+	if err := j.validateSetSerialNumberParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"serialNumber",
@@ -476,7 +512,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetSerialNumber(val *strin
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetStreetAddress(val *[]*string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetStreetAddress(val *[]*string) {
+	if err := j.validateSetStreetAddressParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"streetAddress",
@@ -484,7 +523,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetStreetAddress(val *[]*s
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -492,7 +534,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) SetTerraformAttribute(val 
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -514,6 +559,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) ComputeFqn() *string {
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := c.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -527,6 +575,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetAnyMapAttribute(terrafo
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := c.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -540,6 +591,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetBooleanAttribute(terraf
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := c.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -553,6 +607,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetBooleanMapAttribute(ter
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := c.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -566,6 +623,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetListAttribute(terraform
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := c.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -579,6 +639,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetNumberAttribute(terrafo
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := c.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -592,6 +655,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetNumberListAttribute(ter
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := c.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -605,6 +671,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetNumberMapAttribute(terr
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetStringAttribute(terraformAttribute *string) *string {
+	if err := c.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -618,6 +687,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) GetStringAttribute(terrafo
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := c.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -644,6 +716,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) InterpolationAsList() cdkt
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) InterpolationForAttribute(property *string) cdktf.IResolvable {
+	if err := c.validateInterpolationForAttributeParameters(property); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -729,6 +804,9 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) ResetStreetAddress() {
 }
 
 func (c *jsiiProxy_CertRequestSubjectOutputReference) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := c.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

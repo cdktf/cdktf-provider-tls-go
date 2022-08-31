@@ -99,6 +99,9 @@ func (j *jsiiProxy_DataTlsCertificateCertificatesList) WrapsSet() *bool {
 func NewDataTlsCertificateCertificatesList(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, wrapsSet *bool) DataTlsCertificateCertificatesList {
 	_init_.Initialize()
 
+	if err := validateNewDataTlsCertificateCertificatesListParameters(terraformResource, terraformAttribute, wrapsSet); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_DataTlsCertificateCertificatesList{}
 
 	_jsii_.Create(
@@ -120,7 +123,10 @@ func NewDataTlsCertificateCertificatesList_Override(d DataTlsCertificateCertific
 	)
 }
 
-func (j *jsiiProxy_DataTlsCertificateCertificatesList) SetTerraformAttribute(val *string) {
+func (j *jsiiProxy_DataTlsCertificateCertificatesList)SetTerraformAttribute(val *string) {
+	if err := j.validateSetTerraformAttributeParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformAttribute",
@@ -128,7 +134,10 @@ func (j *jsiiProxy_DataTlsCertificateCertificatesList) SetTerraformAttribute(val
 	)
 }
 
-func (j *jsiiProxy_DataTlsCertificateCertificatesList) SetTerraformResource(val cdktf.IInterpolatingParent) {
+func (j *jsiiProxy_DataTlsCertificateCertificatesList)SetTerraformResource(val cdktf.IInterpolatingParent) {
+	if err := j.validateSetTerraformResourceParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"terraformResource",
@@ -136,7 +145,10 @@ func (j *jsiiProxy_DataTlsCertificateCertificatesList) SetTerraformResource(val 
 	)
 }
 
-func (j *jsiiProxy_DataTlsCertificateCertificatesList) SetWrapsSet(val *bool) {
+func (j *jsiiProxy_DataTlsCertificateCertificatesList)SetWrapsSet(val *bool) {
+	if err := j.validateSetWrapsSetParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"wrapsSet",
@@ -158,6 +170,9 @@ func (d *jsiiProxy_DataTlsCertificateCertificatesList) ComputeFqn() *string {
 }
 
 func (d *jsiiProxy_DataTlsCertificateCertificatesList) Get(index *float64) DataTlsCertificateCertificatesOutputReference {
+	if err := d.validateGetParameters(index); err != nil {
+		panic(err)
+	}
 	var returns DataTlsCertificateCertificatesOutputReference
 
 	_jsii_.Invoke(
@@ -171,6 +186,9 @@ func (d *jsiiProxy_DataTlsCertificateCertificatesList) Get(index *float64) DataT
 }
 
 func (d *jsiiProxy_DataTlsCertificateCertificatesList) Resolve(_context cdktf.IResolveContext) interface{} {
+	if err := d.validateResolveParameters(_context); err != nil {
+		panic(err)
+	}
 	var returns interface{}
 
 	_jsii_.Invoke(

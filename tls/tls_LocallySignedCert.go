@@ -520,6 +520,9 @@ func (j *jsiiProxy_LocallySignedCert) ValidityStartTime() *string {
 func NewLocallySignedCert(scope constructs.Construct, id *string, config *LocallySignedCertConfig) LocallySignedCert {
 	_init_.Initialize()
 
+	if err := validateNewLocallySignedCertParameters(scope, id, config); err != nil {
+		panic(err)
+	}
 	j := jsiiProxy_LocallySignedCert{}
 
 	_jsii_.Create(
@@ -542,7 +545,10 @@ func NewLocallySignedCert_Override(l LocallySignedCert, scope constructs.Constru
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetAllowedUses(val *[]*string) {
+func (j *jsiiProxy_LocallySignedCert)SetAllowedUses(val *[]*string) {
+	if err := j.validateSetAllowedUsesParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"allowedUses",
@@ -550,7 +556,10 @@ func (j *jsiiProxy_LocallySignedCert) SetAllowedUses(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetCaCertPem(val *string) {
+func (j *jsiiProxy_LocallySignedCert)SetCaCertPem(val *string) {
+	if err := j.validateSetCaCertPemParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"caCertPem",
@@ -558,7 +567,10 @@ func (j *jsiiProxy_LocallySignedCert) SetCaCertPem(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetCaPrivateKeyPem(val *string) {
+func (j *jsiiProxy_LocallySignedCert)SetCaPrivateKeyPem(val *string) {
+	if err := j.validateSetCaPrivateKeyPemParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"caPrivateKeyPem",
@@ -566,7 +578,10 @@ func (j *jsiiProxy_LocallySignedCert) SetCaPrivateKeyPem(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetCertRequestPem(val *string) {
+func (j *jsiiProxy_LocallySignedCert)SetCertRequestPem(val *string) {
+	if err := j.validateSetCertRequestPemParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"certRequestPem",
@@ -574,7 +589,10 @@ func (j *jsiiProxy_LocallySignedCert) SetCertRequestPem(val *string) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetConnection(val interface{}) {
+func (j *jsiiProxy_LocallySignedCert)SetConnection(val interface{}) {
+	if err := j.validateSetConnectionParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"connection",
@@ -582,7 +600,7 @@ func (j *jsiiProxy_LocallySignedCert) SetConnection(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetCount(val *float64) {
+func (j *jsiiProxy_LocallySignedCert)SetCount(val *float64) {
 	_jsii_.Set(
 		j,
 		"count",
@@ -590,7 +608,7 @@ func (j *jsiiProxy_LocallySignedCert) SetCount(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetDependsOn(val *[]*string) {
+func (j *jsiiProxy_LocallySignedCert)SetDependsOn(val *[]*string) {
 	_jsii_.Set(
 		j,
 		"dependsOn",
@@ -598,7 +616,10 @@ func (j *jsiiProxy_LocallySignedCert) SetDependsOn(val *[]*string) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetEarlyRenewalHours(val *float64) {
+func (j *jsiiProxy_LocallySignedCert)SetEarlyRenewalHours(val *float64) {
+	if err := j.validateSetEarlyRenewalHoursParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"earlyRenewalHours",
@@ -606,7 +627,7 @@ func (j *jsiiProxy_LocallySignedCert) SetEarlyRenewalHours(val *float64) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetForEach(val cdktf.ITerraformIterator) {
+func (j *jsiiProxy_LocallySignedCert)SetForEach(val cdktf.ITerraformIterator) {
 	_jsii_.Set(
 		j,
 		"forEach",
@@ -614,7 +635,10 @@ func (j *jsiiProxy_LocallySignedCert) SetForEach(val cdktf.ITerraformIterator) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetIsCaCertificate(val interface{}) {
+func (j *jsiiProxy_LocallySignedCert)SetIsCaCertificate(val interface{}) {
+	if err := j.validateSetIsCaCertificateParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"isCaCertificate",
@@ -622,7 +646,10 @@ func (j *jsiiProxy_LocallySignedCert) SetIsCaCertificate(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+func (j *jsiiProxy_LocallySignedCert)SetLifecycle(val *cdktf.TerraformResourceLifecycle) {
+	if err := j.validateSetLifecycleParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"lifecycle",
@@ -630,7 +657,7 @@ func (j *jsiiProxy_LocallySignedCert) SetLifecycle(val *cdktf.TerraformResourceL
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetProvider(val cdktf.TerraformProvider) {
+func (j *jsiiProxy_LocallySignedCert)SetProvider(val cdktf.TerraformProvider) {
 	_jsii_.Set(
 		j,
 		"provider",
@@ -638,7 +665,10 @@ func (j *jsiiProxy_LocallySignedCert) SetProvider(val cdktf.TerraformProvider) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetProvisioners(val *[]interface{}) {
+func (j *jsiiProxy_LocallySignedCert)SetProvisioners(val *[]interface{}) {
+	if err := j.validateSetProvisionersParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"provisioners",
@@ -646,7 +676,10 @@ func (j *jsiiProxy_LocallySignedCert) SetProvisioners(val *[]interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetSetSubjectKeyId(val interface{}) {
+func (j *jsiiProxy_LocallySignedCert)SetSetSubjectKeyId(val interface{}) {
+	if err := j.validateSetSetSubjectKeyIdParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"setSubjectKeyId",
@@ -654,7 +687,10 @@ func (j *jsiiProxy_LocallySignedCert) SetSetSubjectKeyId(val interface{}) {
 	)
 }
 
-func (j *jsiiProxy_LocallySignedCert) SetValidityPeriodHours(val *float64) {
+func (j *jsiiProxy_LocallySignedCert)SetValidityPeriodHours(val *float64) {
+	if err := j.validateSetValidityPeriodHoursParameters(val); err != nil {
+		panic(err)
+	}
 	_jsii_.Set(
 		j,
 		"validityPeriodHours",
@@ -682,6 +718,9 @@ func (j *jsiiProxy_LocallySignedCert) SetValidityPeriodHours(val *float64) {
 func LocallySignedCert_IsConstruct(x interface{}) *bool {
 	_init_.Initialize()
 
+	if err := validateLocallySignedCert_IsConstructParameters(x); err != nil {
+		panic(err)
+	}
 	var returns *bool
 
 	_jsii_.StaticInvoke(
@@ -706,6 +745,9 @@ func LocallySignedCert_TfResourceType() *string {
 }
 
 func (l *jsiiProxy_LocallySignedCert) AddOverride(path *string, value interface{}) {
+	if err := l.validateAddOverrideParameters(path, value); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		l,
 		"addOverride",
@@ -714,6 +756,9 @@ func (l *jsiiProxy_LocallySignedCert) AddOverride(path *string, value interface{
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetAnyMapAttribute(terraformAttribute *string) *map[string]interface{} {
+	if err := l.validateGetAnyMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]interface{}
 
 	_jsii_.Invoke(
@@ -727,6 +772,9 @@ func (l *jsiiProxy_LocallySignedCert) GetAnyMapAttribute(terraformAttribute *str
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetBooleanAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := l.validateGetBooleanAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -740,6 +788,9 @@ func (l *jsiiProxy_LocallySignedCert) GetBooleanAttribute(terraformAttribute *st
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetBooleanMapAttribute(terraformAttribute *string) *map[string]*bool {
+	if err := l.validateGetBooleanMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*bool
 
 	_jsii_.Invoke(
@@ -753,6 +804,9 @@ func (l *jsiiProxy_LocallySignedCert) GetBooleanMapAttribute(terraformAttribute 
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetListAttribute(terraformAttribute *string) *[]*string {
+	if err := l.validateGetListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*string
 
 	_jsii_.Invoke(
@@ -766,6 +820,9 @@ func (l *jsiiProxy_LocallySignedCert) GetListAttribute(terraformAttribute *strin
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetNumberAttribute(terraformAttribute *string) *float64 {
+	if err := l.validateGetNumberAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *float64
 
 	_jsii_.Invoke(
@@ -779,6 +836,9 @@ func (l *jsiiProxy_LocallySignedCert) GetNumberAttribute(terraformAttribute *str
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetNumberListAttribute(terraformAttribute *string) *[]*float64 {
+	if err := l.validateGetNumberListAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *[]*float64
 
 	_jsii_.Invoke(
@@ -792,6 +852,9 @@ func (l *jsiiProxy_LocallySignedCert) GetNumberListAttribute(terraformAttribute 
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetNumberMapAttribute(terraformAttribute *string) *map[string]*float64 {
+	if err := l.validateGetNumberMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*float64
 
 	_jsii_.Invoke(
@@ -805,6 +868,9 @@ func (l *jsiiProxy_LocallySignedCert) GetNumberMapAttribute(terraformAttribute *
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetStringAttribute(terraformAttribute *string) *string {
+	if err := l.validateGetStringAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *string
 
 	_jsii_.Invoke(
@@ -818,6 +884,9 @@ func (l *jsiiProxy_LocallySignedCert) GetStringAttribute(terraformAttribute *str
 }
 
 func (l *jsiiProxy_LocallySignedCert) GetStringMapAttribute(terraformAttribute *string) *map[string]*string {
+	if err := l.validateGetStringMapAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns *map[string]*string
 
 	_jsii_.Invoke(
@@ -831,6 +900,9 @@ func (l *jsiiProxy_LocallySignedCert) GetStringMapAttribute(terraformAttribute *
 }
 
 func (l *jsiiProxy_LocallySignedCert) InterpolationForAttribute(terraformAttribute *string) cdktf.IResolvable {
+	if err := l.validateInterpolationForAttributeParameters(terraformAttribute); err != nil {
+		panic(err)
+	}
 	var returns cdktf.IResolvable
 
 	_jsii_.Invoke(
@@ -844,6 +916,9 @@ func (l *jsiiProxy_LocallySignedCert) InterpolationForAttribute(terraformAttribu
 }
 
 func (l *jsiiProxy_LocallySignedCert) OverrideLogicalId(newLogicalId *string) {
+	if err := l.validateOverrideLogicalIdParameters(newLogicalId); err != nil {
+		panic(err)
+	}
 	_jsii_.InvokeVoid(
 		l,
 		"overrideLogicalId",
