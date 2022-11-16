@@ -60,6 +60,14 @@ func validateSelfSignedCert_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateSelfSignedCert_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateSelfSignedCert_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_SelfSignedCert) validateSetAllowedUsesParameters(val *[]*string) error {
 	return nil
 }

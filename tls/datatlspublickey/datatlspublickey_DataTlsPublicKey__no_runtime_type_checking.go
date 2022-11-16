@@ -56,6 +56,14 @@ func validateDataTlsPublicKey_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTlsPublicKey_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTlsPublicKey_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTlsPublicKey) validateSetLifecycleParameters(val *cdktf.TerraformResourceLifecycle) error {
 	return nil
 }

@@ -56,6 +56,14 @@ func validateDataTlsCertificate_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateDataTlsCertificate_IsTerraformDataSourceParameters(x interface{}) error {
+	return nil
+}
+
+func validateDataTlsCertificate_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_DataTlsCertificate) validateSetContentParameters(val *string) error {
 	return nil
 }

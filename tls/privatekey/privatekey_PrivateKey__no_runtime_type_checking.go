@@ -56,6 +56,14 @@ func validatePrivateKey_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validatePrivateKey_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validatePrivateKey_IsTerraformResourceParameters(x interface{}) error {
+	return nil
+}
+
 func (j *jsiiProxy_PrivateKey) validateSetAlgorithmParameters(val *string) error {
 	return nil
 }

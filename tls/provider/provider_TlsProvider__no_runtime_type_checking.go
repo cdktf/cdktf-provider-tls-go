@@ -16,6 +16,14 @@ func validateTlsProvider_IsConstructParameters(x interface{}) error {
 	return nil
 }
 
+func validateTlsProvider_IsTerraformElementParameters(x interface{}) error {
+	return nil
+}
+
+func validateTlsProvider_IsTerraformProviderParameters(x interface{}) error {
+	return nil
+}
+
 func validateNewTlsProviderParameters(scope constructs.Construct, id *string, config *TlsProviderConfig) error {
 	return nil
 }
