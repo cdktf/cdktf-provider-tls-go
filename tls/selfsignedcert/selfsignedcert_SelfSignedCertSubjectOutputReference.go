@@ -2,9 +2,9 @@ package selfsignedcert
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v4/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v5/jsii"
 
-	"github.com/cdktf/cdktf-provider-tls-go/tls/v4/selfsignedcert/internal"
+	"github.com/cdktf/cdktf-provider-tls-go/tls/v5/selfsignedcert/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
