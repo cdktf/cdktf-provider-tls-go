@@ -1,11 +1,14 @@
+// Copyright (c) HashiCorp, Inc.
+// SPDX-License-Identifier: MPL-2.0
+
 package datatlscertificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v7/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v8/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tls-go/tls/v7/datatlscertificate/internal"
+	"github.com/cdktf/cdktf-provider-tls-go/tls/v8/datatlscertificate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
