@@ -5,10 +5,10 @@ package provider
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tls-go/tls/v8/provider/internal"
+	"github.com/cdktf/cdktf-provider-tls-go/tls/v9/provider/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -253,6 +253,25 @@ func (j *jsiiProxy_TlsProvider)SetProxy(val *TlsProviderProxy) {
 		"proxy",
 		val,
 	)
+}
+
+// Generates CDKTF code for importing a TlsProvider resource upon running "cdktf plan <stack-name>".
+func TlsProvider_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateTlsProvider_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-tls.provider.TlsProvider",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.

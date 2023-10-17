@@ -7,6 +7,10 @@ package selfsignedcert
 
 // Building without runtime type checking enabled, so all the below just return nil
 
+func (s *jsiiProxy_SelfSignedCert) validateAddMoveTargetParameters(moveTarget *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SelfSignedCert) validateAddOverrideParameters(path *string, value interface{}) error {
 	return nil
 }
@@ -47,7 +51,15 @@ func (s *jsiiProxy_SelfSignedCert) validateGetStringMapAttributeParameters(terra
 	return nil
 }
 
+func (s *jsiiProxy_SelfSignedCert) validateImportFromParameters(id *string) error {
+	return nil
+}
+
 func (s *jsiiProxy_SelfSignedCert) validateInterpolationForAttributeParameters(terraformAttribute *string) error {
+	return nil
+}
+
+func (s *jsiiProxy_SelfSignedCert) validateMoveToParameters(moveTarget *string, index interface{}) error {
 	return nil
 }
 
@@ -56,6 +68,10 @@ func (s *jsiiProxy_SelfSignedCert) validateOverrideLogicalIdParameters(newLogica
 }
 
 func (s *jsiiProxy_SelfSignedCert) validatePutSubjectParameters(value *SelfSignedCertSubject) error {
+	return nil
+}
+
+func validateSelfSignedCert_GenerateConfigForImportParameters(scope constructs.Construct, importToId *string, importFromId *string) error {
 	return nil
 }
 

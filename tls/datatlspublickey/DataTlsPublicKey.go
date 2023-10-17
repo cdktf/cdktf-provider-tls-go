@@ -5,10 +5,10 @@ package datatlspublickey
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tls-go/tls/v8/datatlspublickey/internal"
+	"github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlspublickey/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -446,6 +446,25 @@ func (j *jsiiProxy_DataTlsPublicKey)SetProvider(val cdktf.TerraformProvider) {
 		"provider",
 		val,
 	)
+}
+
+// Generates CDKTF code for importing a DataTlsPublicKey resource upon running "cdktf plan <stack-name>".
+func DataTlsPublicKey_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateDataTlsPublicKey_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-tls.dataTlsPublicKey.DataTlsPublicKey",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.

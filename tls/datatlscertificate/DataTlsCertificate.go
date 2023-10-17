@@ -5,10 +5,10 @@ package datatlscertificate
 
 import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
-	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v8/jsii"
+	_init_ "github.com/cdktf/cdktf-provider-tls-go/tls/v9/jsii"
 
 	"github.com/aws/constructs-go/constructs/v10"
-	"github.com/cdktf/cdktf-provider-tls-go/tls/v8/datatlscertificate/internal"
+	"github.com/cdktf/cdktf-provider-tls-go/tls/v9/datatlscertificate/internal"
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
@@ -437,6 +437,25 @@ func (j *jsiiProxy_DataTlsCertificate)SetVerifyChain(val interface{}) {
 		"verifyChain",
 		val,
 	)
+}
+
+// Generates CDKTF code for importing a DataTlsCertificate resource upon running "cdktf plan <stack-name>".
+func DataTlsCertificate_GenerateConfigForImport(scope constructs.Construct, importToId *string, importFromId *string, provider cdktf.TerraformProvider) cdktf.ImportableResource {
+	_init_.Initialize()
+
+	if err := validateDataTlsCertificate_GenerateConfigForImportParameters(scope, importToId, importFromId); err != nil {
+		panic(err)
+	}
+	var returns cdktf.ImportableResource
+
+	_jsii_.StaticInvoke(
+		"@cdktf/provider-tls.dataTlsCertificate.DataTlsCertificate",
+		"generateConfigForImport",
+		[]interface{}{scope, importToId, importFromId, provider},
+		&returns,
+	)
+
+	return returns
 }
 
 // Checks if `x` is a construct.
