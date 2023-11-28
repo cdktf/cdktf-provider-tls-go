@@ -31,7 +31,7 @@ func validateTlsProvider_IsTerraformProviderParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_TlsProvider) validateSetProxyParameters(val *TlsProviderProxy) error {
+func (j *jsiiProxy_TlsProvider) validateSetProxyParameters(val interface{}) error {
 	return nil
 }
 

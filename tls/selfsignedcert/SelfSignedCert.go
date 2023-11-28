@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert tls_self_signed_cert}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert tls_self_signed_cert}.
 type SelfSignedCert interface {
 	cdktf.TerraformResource
 	AllowedUses() *[]*string
@@ -83,8 +83,8 @@ type SelfSignedCert interface {
 	SetSubjectKeyId() interface{}
 	SetSetSubjectKeyId(val interface{})
 	SetSubjectKeyIdInput() interface{}
-	Subject() SelfSignedCertSubjectOutputReference
-	SubjectInput() *SelfSignedCertSubject
+	Subject() SelfSignedCertSubjectList
+	SubjectInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -132,7 +132,7 @@ type SelfSignedCert interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutSubject(value *SelfSignedCertSubject)
+	PutSubject(value interface{})
 	ResetDnsNames()
 	ResetEarlyRenewalHours()
 	ResetIpAddresses()
@@ -489,8 +489,8 @@ func (j *jsiiProxy_SelfSignedCert) SetSubjectKeyIdInput() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_SelfSignedCert) Subject() SelfSignedCertSubjectOutputReference {
-	var returns SelfSignedCertSubjectOutputReference
+func (j *jsiiProxy_SelfSignedCert) Subject() SelfSignedCertSubjectList {
+	var returns SelfSignedCertSubjectList
 	_jsii_.Get(
 		j,
 		"subject",
@@ -499,8 +499,8 @@ func (j *jsiiProxy_SelfSignedCert) Subject() SelfSignedCertSubjectOutputReferenc
 	return returns
 }
 
-func (j *jsiiProxy_SelfSignedCert) SubjectInput() *SelfSignedCertSubject {
-	var returns *SelfSignedCertSubject
+func (j *jsiiProxy_SelfSignedCert) SubjectInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"subjectInput",
@@ -600,7 +600,7 @@ func (j *jsiiProxy_SelfSignedCert) ValidityStartTime() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
 func NewSelfSignedCert(scope constructs.Construct, id *string, config *SelfSignedCertConfig) SelfSignedCert {
 	_init_.Initialize()
 
@@ -618,7 +618,7 @@ func NewSelfSignedCert(scope constructs.Construct, id *string, config *SelfSigne
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
 func NewSelfSignedCert_Override(s SelfSignedCert, scope constructs.Construct, id *string, config *SelfSignedCertConfig) {
 	_init_.Initialize()
 
@@ -1125,7 +1125,7 @@ func (s *jsiiProxy_SelfSignedCert) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (s *jsiiProxy_SelfSignedCert) PutSubject(value *SelfSignedCertSubject) {
+func (s *jsiiProxy_SelfSignedCert) PutSubject(value interface{}) {
 	if err := s.validatePutSubjectParameters(value); err != nil {
 		panic(err)
 	}

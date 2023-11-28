@@ -67,7 +67,7 @@ func (s *jsiiProxy_SelfSignedCert) validateOverrideLogicalIdParameters(newLogica
 	return nil
 }
 
-func (s *jsiiProxy_SelfSignedCert) validatePutSubjectParameters(value *SelfSignedCertSubject) error {
+func (s *jsiiProxy_SelfSignedCert) validatePutSubjectParameters(value interface{}) error {
 	return nil
 }
 

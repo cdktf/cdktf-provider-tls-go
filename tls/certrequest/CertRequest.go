@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request tls_cert_request}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request tls_cert_request}.
 type CertRequest interface {
 	cdktf.TerraformResource
 	// Experimental.
@@ -67,8 +67,8 @@ type CertRequest interface {
 	SetProvisioners(val *[]interface{})
 	// Experimental.
 	RawOverrides() interface{}
-	Subject() CertRequestSubjectOutputReference
-	SubjectInput() *CertRequestSubject
+	Subject() CertRequestSubjectList
+	SubjectInput() interface{}
 	// Experimental.
 	TerraformGeneratorMetadata() *cdktf.TerraformProviderGeneratorMetadata
 	// Experimental.
@@ -111,7 +111,7 @@ type CertRequest interface {
 	// Overrides the auto-generated logical ID with a specific ID.
 	// Experimental.
 	OverrideLogicalId(newLogicalId *string)
-	PutSubject(value *CertRequestSubject)
+	PutSubject(value interface{})
 	ResetDnsNames()
 	ResetIpAddresses()
 	// Resets a previously passed logical Id to use the auto-generated logical id again.
@@ -354,8 +354,8 @@ func (j *jsiiProxy_CertRequest) RawOverrides() interface{} {
 	return returns
 }
 
-func (j *jsiiProxy_CertRequest) Subject() CertRequestSubjectOutputReference {
-	var returns CertRequestSubjectOutputReference
+func (j *jsiiProxy_CertRequest) Subject() CertRequestSubjectList {
+	var returns CertRequestSubjectList
 	_jsii_.Get(
 		j,
 		"subject",
@@ -364,8 +364,8 @@ func (j *jsiiProxy_CertRequest) Subject() CertRequestSubjectOutputReference {
 	return returns
 }
 
-func (j *jsiiProxy_CertRequest) SubjectInput() *CertRequestSubject {
-	var returns *CertRequestSubject
+func (j *jsiiProxy_CertRequest) SubjectInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"subjectInput",
@@ -425,7 +425,7 @@ func (j *jsiiProxy_CertRequest) UrisInput() *[]*string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request tls_cert_request} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request tls_cert_request} Resource.
 func NewCertRequest(scope constructs.Construct, id *string, config *CertRequestConfig) CertRequest {
 	_init_.Initialize()
 
@@ -443,7 +443,7 @@ func NewCertRequest(scope constructs.Construct, id *string, config *CertRequestC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/cert_request tls_cert_request} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/cert_request tls_cert_request} Resource.
 func NewCertRequest_Override(c CertRequest, scope constructs.Construct, id *string, config *CertRequestConfig) {
 	_init_.Initialize()
 
@@ -884,7 +884,7 @@ func (c *jsiiProxy_CertRequest) OverrideLogicalId(newLogicalId *string) {
 	)
 }
 
-func (c *jsiiProxy_CertRequest) PutSubject(value *CertRequestSubject) {
+func (c *jsiiProxy_CertRequest) PutSubject(value interface{}) {
 	if err := c.validatePutSubjectParameters(value); err != nil {
 		panic(err)
 	}

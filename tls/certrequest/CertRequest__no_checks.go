@@ -67,7 +67,7 @@ func (c *jsiiProxy_CertRequest) validateOverrideLogicalIdParameters(newLogicalId
 	return nil
 }
 
-func (c *jsiiProxy_CertRequest) validatePutSubjectParameters(value *CertRequestSubject) error {
+func (c *jsiiProxy_CertRequest) validatePutSubjectParameters(value interface{}) error {
 	return nil
 }
 

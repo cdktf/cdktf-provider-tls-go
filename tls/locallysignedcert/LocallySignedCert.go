@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/locally_signed_cert tls_locally_signed_cert}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/locally_signed_cert tls_locally_signed_cert}.
 type LocallySignedCert interface {
 	cdktf.TerraformResource
 	AllowedUses() *[]*string
@@ -526,7 +526,7 @@ func (j *jsiiProxy_LocallySignedCert) ValidityStartTime() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/locally_signed_cert tls_locally_signed_cert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/locally_signed_cert tls_locally_signed_cert} Resource.
 func NewLocallySignedCert(scope constructs.Construct, id *string, config *LocallySignedCertConfig) LocallySignedCert {
 	_init_.Initialize()
 
@@ -544,7 +544,7 @@ func NewLocallySignedCert(scope constructs.Construct, id *string, config *Locall
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/locally_signed_cert tls_locally_signed_cert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/locally_signed_cert tls_locally_signed_cert} Resource.
 func NewLocallySignedCert_Override(l LocallySignedCert, scope constructs.Construct, id *string, config *LocallySignedCertConfig) {
 	_init_.Initialize()
 

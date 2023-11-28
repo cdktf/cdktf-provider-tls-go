@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls}.
 type TlsProvider interface {
 	cdktf.TerraformProvider
 	Alias() *string
@@ -30,9 +30,9 @@ type TlsProvider interface {
 	MetaAttributes() *map[string]interface{}
 	// The tree node.
 	Node() constructs.Node
-	Proxy() *TlsProviderProxy
-	SetProxy(val *TlsProviderProxy)
-	ProxyInput() *TlsProviderProxy
+	Proxy() interface{}
+	SetProxy(val interface{})
+	ProxyInput() interface{}
 	// Experimental.
 	RawOverrides() interface{}
 	// Experimental.
@@ -146,8 +146,8 @@ func (j *jsiiProxy_TlsProvider) Node() constructs.Node {
 	return returns
 }
 
-func (j *jsiiProxy_TlsProvider) Proxy() *TlsProviderProxy {
-	var returns *TlsProviderProxy
+func (j *jsiiProxy_TlsProvider) Proxy() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"proxy",
@@ -156,8 +156,8 @@ func (j *jsiiProxy_TlsProvider) Proxy() *TlsProviderProxy {
 	return returns
 }
 
-func (j *jsiiProxy_TlsProvider) ProxyInput() *TlsProviderProxy {
-	var returns *TlsProviderProxy
+func (j *jsiiProxy_TlsProvider) ProxyInput() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"proxyInput",
@@ -207,7 +207,7 @@ func (j *jsiiProxy_TlsProvider) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls} Resource.
 func NewTlsProvider(scope constructs.Construct, id *string, config *TlsProviderConfig) TlsProvider {
 	_init_.Initialize()
 
@@ -225,7 +225,7 @@ func NewTlsProvider(scope constructs.Construct, id *string, config *TlsProviderC
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs tls} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs tls} Resource.
 func NewTlsProvider_Override(t TlsProvider, scope constructs.Construct, id *string, config *TlsProviderConfig) {
 	_init_.Initialize()
 
@@ -244,7 +244,7 @@ func (j *jsiiProxy_TlsProvider)SetAlias(val *string) {
 	)
 }
 
-func (j *jsiiProxy_TlsProvider)SetProxy(val *TlsProviderProxy) {
+func (j *jsiiProxy_TlsProvider)SetProxy(val interface{}) {
 	if err := j.validateSetProxyParameters(val); err != nil {
 		panic(err)
 	}

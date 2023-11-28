@@ -36,8 +36,8 @@ type SelfSignedCertSubjectOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *SelfSignedCertSubject
-	SetInternalValue(val *SelfSignedCertSubject)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Locality() *string
 	SetLocality(val *string)
 	LocalityInput() *string
@@ -195,8 +195,8 @@ func (j *jsiiProxy_SelfSignedCertSubjectOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_SelfSignedCertSubjectOutputReference) InternalValue() *SelfSignedCertSubject {
-	var returns *SelfSignedCertSubject
+func (j *jsiiProxy_SelfSignedCertSubjectOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -366,29 +366,29 @@ func (j *jsiiProxy_SelfSignedCertSubjectOutputReference) TerraformResource() cdk
 }
 
 
-func NewSelfSignedCertSubjectOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) SelfSignedCertSubjectOutputReference {
+func NewSelfSignedCertSubjectOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) SelfSignedCertSubjectOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewSelfSignedCertSubjectOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewSelfSignedCertSubjectOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_SelfSignedCertSubjectOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewSelfSignedCertSubjectOutputReference_Override(s SelfSignedCertSubjectOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewSelfSignedCertSubjectOutputReference_Override(s SelfSignedCertSubjectOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-tls.selfSignedCert.SelfSignedCertSubjectOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		s,
 	)
 }
@@ -437,7 +437,7 @@ func (j *jsiiProxy_SelfSignedCertSubjectOutputReference)SetCountry(val *string) 
 	)
 }
 
-func (j *jsiiProxy_SelfSignedCertSubjectOutputReference)SetInternalValue(val *SelfSignedCertSubject) {
+func (j *jsiiProxy_SelfSignedCertSubjectOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

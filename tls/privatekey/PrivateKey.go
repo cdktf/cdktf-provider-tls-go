@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key tls_private_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key tls_private_key}.
 type PrivateKey interface {
 	cdktf.TerraformResource
 	Algorithm() *string
@@ -432,7 +432,7 @@ func (j *jsiiProxy_PrivateKey) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key tls_private_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key tls_private_key} Resource.
 func NewPrivateKey(scope constructs.Construct, id *string, config *PrivateKeyConfig) PrivateKey {
 	_init_.Initialize()
 
@@ -450,7 +450,7 @@ func NewPrivateKey(scope constructs.Construct, id *string, config *PrivateKeyCon
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/resources/private_key tls_private_key} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs/resources/private_key tls_private_key} Resource.
 func NewPrivateKey_Override(p PrivateKey, scope constructs.Construct, id *string, config *PrivateKeyConfig) {
 	_init_.Initialize()
 

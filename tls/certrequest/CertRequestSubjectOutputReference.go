@@ -36,8 +36,8 @@ type CertRequestSubjectOutputReference interface {
 	CreationStack() *[]*string
 	// Experimental.
 	Fqn() *string
-	InternalValue() *CertRequestSubject
-	SetInternalValue(val *CertRequestSubject)
+	InternalValue() interface{}
+	SetInternalValue(val interface{})
 	Locality() *string
 	SetLocality(val *string)
 	LocalityInput() *string
@@ -195,8 +195,8 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) Fqn() *string {
 	return returns
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) InternalValue() *CertRequestSubject {
-	var returns *CertRequestSubject
+func (j *jsiiProxy_CertRequestSubjectOutputReference) InternalValue() interface{} {
+	var returns interface{}
 	_jsii_.Get(
 		j,
 		"internalValue",
@@ -366,29 +366,29 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) TerraformResource() cdktf.
 }
 
 
-func NewCertRequestSubjectOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) CertRequestSubjectOutputReference {
+func NewCertRequestSubjectOutputReference(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) CertRequestSubjectOutputReference {
 	_init_.Initialize()
 
-	if err := validateNewCertRequestSubjectOutputReferenceParameters(terraformResource, terraformAttribute); err != nil {
+	if err := validateNewCertRequestSubjectOutputReferenceParameters(terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet); err != nil {
 		panic(err)
 	}
 	j := jsiiProxy_CertRequestSubjectOutputReference{}
 
 	_jsii_.Create(
 		"@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		&j,
 	)
 
 	return &j
 }
 
-func NewCertRequestSubjectOutputReference_Override(c CertRequestSubjectOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) {
+func NewCertRequestSubjectOutputReference_Override(c CertRequestSubjectOutputReference, terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) {
 	_init_.Initialize()
 
 	_jsii_.Create(
 		"@cdktf/provider-tls.certRequest.CertRequestSubjectOutputReference",
-		[]interface{}{terraformResource, terraformAttribute},
+		[]interface{}{terraformResource, terraformAttribute, complexObjectIndex, complexObjectIsFromSet},
 		c,
 	)
 }
@@ -437,7 +437,7 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference)SetCountry(val *string) {
 	)
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference)SetInternalValue(val *CertRequestSubject) {
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetInternalValue(val interface{}) {
 	if err := j.validateSetInternalValueParameters(val); err != nil {
 		panic(err)
 	}

@@ -11,6 +11,7 @@ import (
 	_jsii_ "github.com/aws/jsii-runtime-go/runtime"
 
 	"github.com/aws/constructs-go/constructs/v10"
+	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
 func (t *jsiiProxy_TlsProvider) validateAddOverrideParameters(path *string, value interface{}) error {
@@ -73,9 +74,29 @@ func validateTlsProvider_IsTerraformProviderParameters(x interface{}) error {
 	return nil
 }
 
-func (j *jsiiProxy_TlsProvider) validateSetProxyParameters(val *TlsProviderProxy) error {
-	if err := _jsii_.ValidateStruct(val, func() string { return "parameter val" }); err != nil {
-		return err
+func (j *jsiiProxy_TlsProvider) validateSetProxyParameters(val interface{}) error {
+	switch val.(type) {
+	case cdktf.IResolvable:
+		// ok
+	case *[]*TlsProviderProxy:
+		val := val.(*[]*TlsProviderProxy)
+		for idx_97dfc6, v := range *val {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
+				return err
+			}
+		}
+	case []*TlsProviderProxy:
+		val_ := val.([]*TlsProviderProxy)
+		val := &val_
+		for idx_97dfc6, v := range *val {
+			if err := _jsii_.ValidateStruct(v, func() string { return fmt.Sprintf("parameter val[%#v]", idx_97dfc6) }); err != nil {
+				return err
+			}
+		}
+	default:
+		if !_jsii_.IsAnonymousProxy(val) {
+			return fmt.Errorf("parameter val must be one of the allowed types: cdktf.IResolvable, *[]*TlsProviderProxy; received %#v (a %T)", val, val)
+		}
 	}
 
 	return nil

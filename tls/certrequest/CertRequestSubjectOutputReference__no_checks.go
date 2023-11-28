@@ -67,7 +67,7 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetCountryParamete
 	return nil
 }
 
-func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetInternalValueParameters(val *CertRequestSubject) error {
+func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }
 
@@ -107,7 +107,7 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetTerraformResour
 	return nil
 }
 
-func validateNewCertRequestSubjectOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string) error {
+func validateNewCertRequestSubjectOutputReferenceParameters(terraformResource cdktf.IInterpolatingParent, terraformAttribute *string, complexObjectIndex *float64, complexObjectIsFromSet *bool) error {
 	return nil
 }
 
