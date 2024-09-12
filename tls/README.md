@@ -1,12 +1,15 @@
-# CDKTF Go bindings for hashicorp/tls provider version 4.0.5
+# CDKTF Go bindings for hashicorp/tls provider version 4.0.6
 
-This repo builds and publishes the [Terraform tls provider](https://registry.terraform.io/providers/hashicorp/tls/4.0.5/docs) bindings for [CDK for Terraform](https://cdk.tf).
+This repo builds and publishes the [Terraform tls provider](https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs) bindings for [CDK for Terraform](https://cdk.tf).
 
 ## Go Package
 
 The go package is generated into the [`github.com/cdktf/cdktf-provider-tls-go`](https://github.com/cdktf/cdktf-provider-tls-go) package.
 
-`go get github.com/cdktf/cdktf-provider-tls-go/tls`
+`go get github.com/cdktf/cdktf-provider-tls-go/tls/<version>`
+
+Where `<version>` is the version of the prebuilt provider you would like to use e.g. `v11`. The full module name can be found
+within the [go.mod](https://github.com/cdktf/cdktf-provider-tls-go/blob/main/tls/go.mod#L1) file.
 
 ## Docs
 
@@ -20,7 +23,7 @@ This project is explicitly not tracking the Terraform tls provider version 1:1. 
 These are the upstream dependencies:
 
 * [CDK for Terraform](https://cdk.tf)
-* [Terraform tls provider](https://registry.terraform.io/providers/hashicorp/tls/4.0.5)
+* [Terraform tls provider](https://registry.terraform.io/providers/hashicorp/tls/4.0.6)
 * [Terraform Engine](https://terraform.io)
 
 If there are breaking changes (backward incompatible) in any of the above, the major version of this project will be bumped.
