@@ -67,6 +67,10 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetCountryParamete
 	return nil
 }
 
+func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetEmailAddressParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

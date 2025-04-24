@@ -34,6 +34,9 @@ type CertRequestSubjectOutputReference interface {
 	// If this returns an empty array the stack will not be attached.
 	// Experimental.
 	CreationStack() *[]*string
+	EmailAddress() *string
+	SetEmailAddress(val *string)
+	EmailAddressInput() *string
 	// Experimental.
 	Fqn() *string
 	InternalValue() interface{}
@@ -93,6 +96,7 @@ type CertRequestSubjectOutputReference interface {
 	InterpolationForAttribute(property *string) cdktf.IResolvable
 	ResetCommonName()
 	ResetCountry()
+	ResetEmailAddress()
 	ResetLocality()
 	ResetOrganization()
 	ResetOrganizationalUnit()
@@ -180,6 +184,26 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) CreationStack() *[]*string
 	_jsii_.Get(
 		j,
 		"creationStack",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CertRequestSubjectOutputReference) EmailAddress() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"emailAddress",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_CertRequestSubjectOutputReference) EmailAddressInput() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"emailAddressInput",
 		&returns,
 	)
 	return returns
@@ -433,6 +457,17 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference)SetCountry(val *string) {
 	_jsii_.Set(
 		j,
 		"country",
+		val,
+	)
+}
+
+func (j *jsiiProxy_CertRequestSubjectOutputReference)SetEmailAddress(val *string) {
+	if err := j.validateSetEmailAddressParameters(val); err != nil {
+		panic(err)
+	}
+	_jsii_.Set(
+		j,
+		"emailAddress",
 		val,
 	)
 }
@@ -745,6 +780,14 @@ func (c *jsiiProxy_CertRequestSubjectOutputReference) ResetCountry() {
 	_jsii_.InvokeVoid(
 		c,
 		"resetCountry",
+		nil, // no parameters
+	)
+}
+
+func (c *jsiiProxy_CertRequestSubjectOutputReference) ResetEmailAddress() {
+	_jsii_.InvokeVoid(
+		c,
+		"resetEmailAddress",
 		nil, // no parameters
 	)
 }

@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/self_signed_cert tls_self_signed_cert}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/self_signed_cert tls_self_signed_cert}.
 type SelfSignedCert interface {
 	cdktf.TerraformResource
 	AllowedUses() *[]*string
@@ -613,7 +613,7 @@ func (j *jsiiProxy_SelfSignedCert) ValidityStartTime() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
 func NewSelfSignedCert(scope constructs.Construct, id *string, config *SelfSignedCertConfig) SelfSignedCert {
 	_init_.Initialize()
 
@@ -631,7 +631,7 @@ func NewSelfSignedCert(scope constructs.Construct, id *string, config *SelfSigne
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/resources/self_signed_cert tls_self_signed_cert} Resource.
 func NewSelfSignedCert_Override(s SelfSignedCert, scope constructs.Construct, id *string, config *SelfSignedCertConfig) {
 	_init_.Initialize()
 

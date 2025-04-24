@@ -12,7 +12,7 @@ import (
 	"github.com/hashicorp/terraform-cdk-go/cdktf"
 )
 
-// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/data-sources/public_key tls_public_key}.
+// Represents a {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/data-sources/public_key tls_public_key}.
 type DataTlsPublicKey interface {
 	cdktf.TerraformDataSource
 	Algorithm() *string
@@ -355,7 +355,7 @@ func (j *jsiiProxy_DataTlsPublicKey) TerraformResourceType() *string {
 }
 
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/data-sources/public_key tls_public_key} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/data-sources/public_key tls_public_key} Data Source.
 func NewDataTlsPublicKey(scope constructs.Construct, id *string, config *DataTlsPublicKeyConfig) DataTlsPublicKey {
 	_init_.Initialize()
 
@@ -373,7 +373,7 @@ func NewDataTlsPublicKey(scope constructs.Construct, id *string, config *DataTls
 	return &j
 }
 
-// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.0.6/docs/data-sources/public_key tls_public_key} Data Source.
+// Create a new {@link https://registry.terraform.io/providers/hashicorp/tls/4.1.0/docs/data-sources/public_key tls_public_key} Data Source.
 func NewDataTlsPublicKey_Override(d DataTlsPublicKey, scope constructs.Construct, id *string, config *DataTlsPublicKeyConfig) {
 	_init_.Initialize()
 

@@ -67,6 +67,10 @@ func (j *jsiiProxy_SelfSignedCertSubjectOutputReference) validateSetCountryParam
 	return nil
 }
 
+func (j *jsiiProxy_SelfSignedCertSubjectOutputReference) validateSetEmailAddressParameters(val *string) error {
+	return nil
+}
+
 func (j *jsiiProxy_SelfSignedCertSubjectOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	return nil
 }

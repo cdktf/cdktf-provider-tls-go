@@ -182,6 +182,14 @@ func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetCountryParamete
 	return nil
 }
 
+func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetEmailAddressParameters(val *string) error {
+	if val == nil {
+		return fmt.Errorf("parameter val is required, but nil was provided")
+	}
+
+	return nil
+}
+
 func (j *jsiiProxy_CertRequestSubjectOutputReference) validateSetInternalValueParameters(val interface{}) error {
 	switch val.(type) {
 	case *CertRequestSubject:
